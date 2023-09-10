@@ -1,7 +1,7 @@
 
 const Country = ({country, handleVisitedCountries}) => {
     // console.log(country);
-    const {name,flags} = country;
+    const {name,flags, population, area} = country;
     // console.log(name);
     
     return (
@@ -11,7 +11,9 @@ const Country = ({country, handleVisitedCountries}) => {
             <img src={flags.png} alt="Shoes" className="rounded-xl h-[200px] w-full" />
         </figure>
         <div className="card-body items-center text-center">
-            <h2 className="card-title">{name.common}</h2>
+            <h2 className="card-title">Country Name: {name.common}</h2>
+            <p>Population: {population}</p>
+            <p>Area: {area}</p>
             
             <div className="card-actions">
             <button onClick={()=> handleVisitedCountries(country)} className="btn btn-primary">Mark Visited</button>

@@ -31,7 +31,7 @@ const Countries = () => {
             <div className="ml-5">
                 <h3 className="font-medium text-center flex-1">Visited Countries: {visitedCountries.length}</h3>
                 {
-                    visitedCountries.map(country =><li key={country.cca3}>{country.name.common}</li>)
+                    visitedCountries.map(country =><li key={country.cca3}>{country.name.common}</li> )
                 }
             </div>
             </div>
