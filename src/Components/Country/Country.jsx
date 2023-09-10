@@ -8,7 +8,7 @@ const Country = ({country, handleVisitedCountries}) => {
     const [visited, setVisited] = useState(false);
 
     const handleVisited = () => {
-        setVisited(!visited);
+        setVisited(true);
     }
     
     return (
@@ -23,8 +23,8 @@ const Country = ({country, handleVisitedCountries}) => {
             <p>Area: {area}</p>
             
             <div className="card-actions space-x-6">
-            <button onClick={()=> handleVisitedCountries(country)} className="btn btn-primary">Mark Visited</button>
-            <button onClick={handleVisited} className="btn btn-secondary">{visited? "Visited": "Going"}</button>
+            <button onClickCapture={handleVisited} onClick={()=> handleVisitedCountries(country)} className="btn btn-primary">Mark Visited</button>
+            {/* <button onClick={handleVisited} className="btn btn-secondary">{visited? "Visited": "Going"}</button> */}
             </div>
         </div>
         </div>
